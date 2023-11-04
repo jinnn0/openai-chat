@@ -1,8 +1,11 @@
 # dependencies
-node_modules
+**node_modules
 
 # System Files
-.DS_Store
+**.DS_Store
 
 # compiled output
 **dist
+
+# misc
+**.env
