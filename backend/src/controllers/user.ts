@@ -1,0 +1,3 @@
+const getAllusers = () => {};
+
+export { getAllusers };
