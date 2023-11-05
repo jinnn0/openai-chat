@@ -107,7 +107,6 @@ const userLogin = async (req: Request, res: Response, next: NextFunction) => {
 };
 
 export const verifyUser = async (req: Request, res: Response) => {
-  console.log('verifyUser: ');
   try {
     // user token check
     const user = await User.findById(res.locals.jwtData.id);

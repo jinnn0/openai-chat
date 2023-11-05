@@ -17,8 +17,6 @@ const Login = () => {
     const email = formData.get('email') as string;
     const password = formData.get('password') as string;
 
-    console.log('formData: ', password);
-
     try {
       toast.loading('Signing In', { id: 'login' });
       await auth?.login(email, password);
@@ -31,7 +29,7 @@ const Login = () => {
 
   useEffect(() => {
     if (auth?.user) {
-      // return navigate('/chat');
+      return navigate('/chat');
     }
   }, [auth]);
 
