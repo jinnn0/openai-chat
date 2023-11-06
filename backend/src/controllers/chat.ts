@@ -6,8 +6,6 @@ import { OpenAIApi, ChatCompletionRequestMessage } from 'openai';
 export const generateChatCompletion = async (req: Request, res: Response) => {
   const { message } = req.body;
 
-  console.log('generateChatCompletion => message: ', message);
-
   try {
     const user = await User.findById(res.locals.jwtData.id);
 

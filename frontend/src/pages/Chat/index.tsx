@@ -47,6 +47,7 @@ const Chat = () => {
     }
   };
 
+  // useLayoutEffect runs before it's rendered on the UI
   useLayoutEffect(() => {
     if (auth?.isLoggedIn && auth.user) {
       toast.loading('Loading Chats', { id: 'loadchats' });
@@ -67,6 +68,7 @@ const Chat = () => {
       return navigate('/login');
     }
   }, [auth]);
+
   return (
     <Box
       sx={{

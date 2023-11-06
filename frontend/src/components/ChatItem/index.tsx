@@ -36,6 +36,7 @@ const ChatItem = ({
 }) => {
   const messageBlocks = extractCodeFromString(content);
   const auth = useAuth();
+
   return role == 'assistant' ? (
     <Box
       sx={{

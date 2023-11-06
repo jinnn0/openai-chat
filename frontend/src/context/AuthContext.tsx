@@ -8,7 +8,7 @@ import {
 import {
   checkAuthStatus,
   loginUser,
-  // logoutUser,
+  logoutUser,
   signupUser,
 } from '../helpers/api-communicator';
 
@@ -34,6 +34,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     // fetch if the user's cookies are valid then skip login
 
+    console.log('check status');
     async function checkStatus() {
       const data = await checkAuthStatus();
 
@@ -67,10 +68,10 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const logout = async () => {
-    // await logoutUser();
-    // setIsLoggedIn(false);
-    // setUser(null);
-    // window.location.reload();
+    await logoutUser();
+    setIsLoggedIn(false);
+    setUser(null);
+    window.location.reload();
   };
 
   const value = {
